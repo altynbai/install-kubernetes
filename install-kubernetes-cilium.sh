@@ -224,7 +224,7 @@ function install_cni(){
   curl -L --remote-name https://github.com/cilium/cilium-cli/releases/latest/download/cilium-linux-amd64.tar.gz
   tar xzvf cilium-linux-amd64.tar.gz -C /usr/local/bin
   rm cilium-linux-amd64.tar.gz
-  cilium install
+  /usr/local/bin/cilium install
   if [ "$?" -ne 0 ]; then
     echo "Cilium installation failed"
     exit 1
