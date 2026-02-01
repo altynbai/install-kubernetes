@@ -1,0 +1,31 @@
+# AWS region where the cluster will be deployed
+aws_region = "us-east-1"
+
+# Environment name (used for tagging and naming resources)
+environment = "k8s-cluster"
+
+# VPC CIDR block
+vpc_cidr = "10.0.0.0/16"
+
+# AMI ID for Ubuntu 22.04 LTS (update based on your region)
+# us-east-1: ami-0c55b159cbfafe1f0
+# us-west-2: ami-0ae8e15ae91d60d90
+# eu-west-1: ami-0a8e758f5e873d1c1
+#instance_ami = "ami-0c55b159cbfafe1f0"
+
+# EC2 Key Pair name - REQUIRED: Create this key pair in AWS console first
+# and download the private key to your machine
+instance_key_pair = "tauanpro-rsa-keys"
+
+# Instance types based on README.md specifications
+# Control plane: 4G memory, 40G disk, 2 CPUs -> t3.large or t3.xlarge
+control_plane_instance_type = "t2.medium"
+
+# Worker nodes: 8G memory, 40G disk, 4 CPUs -> t3.2xlarge
+worker_instance_type = "t2.medium"
+
+# Number of worker nodes to create
+worker_node_count = 3
+
+# Root volume size in GB
+root_volume_size = 40
